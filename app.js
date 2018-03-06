@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 const app = express();
 
 var options = {
-  key: fs.readFile('./214531658760883.key'),
-  cert: fs.readFile('./214531658760883.pem')
+  key: fs.readFileSync('./214531658760883.key'),
+  cert: fs.readFileSync('./214531658760883.pem')
 }
 // var router = express.Router();
 var axios = require('axios');
