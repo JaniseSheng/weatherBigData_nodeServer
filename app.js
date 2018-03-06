@@ -1,8 +1,15 @@
 const faker = require('faker');
+var http = require('http');
+var https = require('https');
+var fs = require('fs');
 const express = require('express');
 var bodyParser = require('body-parser');
 const app = express();
 
+var options = {
+  key: fs.readFile('./214531658760883.key'),
+  cert: fs.readFile('./214531658760883.pem')
+}
 // var router = express.Router();
 var axios = require('axios');
 
@@ -31,5 +38,5 @@ app.post('/', function (req, res, next) {
   })
 });
 
-
-app.listen(80);
+http.createServer(app).listen(80);
+http.createServer(option, app).listen(443);
