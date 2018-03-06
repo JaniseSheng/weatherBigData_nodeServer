@@ -38,5 +38,5 @@ app.post('/', function (req, res, next) {
   })
 });
 
-// http.createServer(app).listen(80);
-https.createServer(options, app).listen(80);
+http.createServer(app).listen(80);
+https.createServer(options, app).listen(443);
